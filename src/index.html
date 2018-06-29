@@ -7,8 +7,23 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <custom-style>
+    <style is="custom-style" include="demo-pages-shared-styles">
+    </style>
+  </custom-style>
 </head>
 <body>
+<div class="vertical-section-container centered">
+  <h1>KSE Angular 2 project using component from kse-common-ui toolbox</h1>
+  <demo-snippet>
+    <template>
+      <icon-toggle toggle-icon="star"></icon-toggle>
+      <icon-toggle toggle-icon="favorite" pressed></icon-toggle>
+    </template>
+  </demo-snippet>
   <app-root></app-root>
+</div>
+
 </body>
 </html>
