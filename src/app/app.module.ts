@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import '@webcomponents/webcomponentsjs/webcomponents-loader';
 
 import { AppComponent } from './app.component';
 

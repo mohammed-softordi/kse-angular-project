@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
-import '@webcomponents/webcomponentsjs/webcomponents-loader'
 import '@polymer/polymer/polymer-element';
 import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
 import '@polymer/iron-demo-helpers/demo-snippet';
 import 'kse-common-ui/icon-toggle';
+import 'kse-common-ui/ks-search';
 
 @Component({
   selector: 'app-root',
