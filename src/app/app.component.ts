@@ -11,5 +11,7 @@ import 'kse-common-ui/ks-search';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'App using KSE common icon component';
+  title = 'KSE Angular2 project using component from kse-common-ui toolbox';
+  searchCriteria = 'Demo';
+
 }

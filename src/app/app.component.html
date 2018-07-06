@@ -1,8 +1,10 @@
-<h3>Basic icon-toggle demo</h3>
+<h1>{{title}}</h1>
 <icon-toggle toggle-icon="star"></icon-toggle>
 <icon-toggle toggle-icon="favorite" pressed></icon-toggle>
 
 <h3>KS search custom element</h3>
 
-<ks-search icon-class="search" reload-on-clear value="Demo"></ks-search>
-
+<div>
+  <ks-search icon-class="search" reload-on-clear value="{{searchCriteria}}" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
+  <div  style="background-color: green">Value entered in Angular App: {{searchCriteria}} </div>
+</div>
