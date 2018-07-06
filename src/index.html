@@ -24,10 +24,11 @@
     </template>
   </demo-snippet>
   <h3> ks-search Basic usage</h3>
+  OBS: the `ngDefaultControl` allowing the `ks-search` custom element to use angular forms
    <demo-snippet>
-
         <template>
-          <ks-search icon-class="search" reload-on-clear value="Demo"></ks-search>
+          <ks-search icon-class="search" reload-on-clear value="Demo" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
+
         </template>
       </demo-snippet>
 </div>
