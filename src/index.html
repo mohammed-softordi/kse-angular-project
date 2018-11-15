@@ -14,6 +14,10 @@
   </custom-style>
 </head>
 <body>
+<!--<corporate-header site-name="Kse common ui" site-url="/demo">
+  <nav-item location="https://www.scania.com/world/#/" text="Scania"></nav-item>
+  <nav-item location="#" text="Dealer"></nav-item>
+</corporate-header>-->
 <div class="vertical-section-container centered">
   <app-root></app-root>
   <h3>icon-toggle Basic usage</h3>
@@ -28,9 +32,13 @@
    <demo-snippet>
         <template>
           <ks-search icon-class="search" reload-on-clear value="Demo" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
-
         </template>
-      </demo-snippet>
+   </demo-snippet>
+  <demo-snippet>
+    <template>
+      <google-chart id="timeline" type="timeline"></google-chart>
+    </template>
+  </demo-snippet>
 </div>
 
 </body>
