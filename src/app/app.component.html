@@ -1,10 +1,17 @@
-<h1>{{title}}</h1>
-<icon-toggle toggle-icon="star"></icon-toggle>
-<icon-toggle toggle-icon="favorite" pressed></icon-toggle>
+<ks-main-header [siteName]="title" site-url="/">
+       <ks-nav-item href="https://fmpnextgen.scania.com/#/help/dashboard" title="Help" target="_blank" class="ks-main-header"></ks-nav-item>
+    <ks-nav-item href="https://www.scania.com" title="Scania" target="_blank" class="ks-main-header"></ks-nav-item>
+</ks-main-header>
+<ks-main-content>
+    <h3>KS search custom element</h3>
 
-<h3>KS search custom element</h3>
+    <div>
+      <ks-search icon-class="search" reload-on-clear value="{{searchCriteria}}" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
+      <div  style="background-color: green">Value entered in Angular App: {{searchCriteria}} </div>
+    </div>
+</ks-main-content>
 
-<div>
-  <ks-search icon-class="search" reload-on-clear value="{{searchCriteria}}" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
-  <div  style="background-color: green">Value entered in Angular App: {{searchCriteria}} </div>
-</div>
+<ks-main-footer>
+            <ks-nav-item slot="privacy" target="_blank" class="ks-main-footer" title="Privacy statement"
+                         href="https://www.scania.com/uk/en/home/legalnotice/privacy-statement.html"></ks-nav-item>
+</ks-main-footer>

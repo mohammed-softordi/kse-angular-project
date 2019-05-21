@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
-import '@polymer/polymer/polymer-element';
-import '@polymer/iron-demo-helpers/demo-pages-shared-styles';
-import '@polymer/iron-demo-helpers/demo-snippet';
-import 'kse-common-ui/icon-toggle';
+
+import 'kse-common-ui/ks-nav-item';
+import 'kse-common-ui/ks-main-content';
+import 'kse-common-ui/ks-main-header';
+import 'kse-common-ui/ks-main-footer';
 import 'kse-common-ui/ks-search';
 
 @Component({
@@ -11,7 +12,7 @@ import 'kse-common-ui/ks-search';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'KSE Angular2 project using component from kse-common-ui toolbox';
+  title = 'KS Angular2 project';
   searchCriteria = 'Demo';
 
 }

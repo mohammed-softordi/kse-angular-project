@@ -2,36 +2,10 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>KseAngularProject</title>
+  <title>Kse Angular Project</title>
   <base href="/">
-
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
-
-  <custom-style>
-    <style is="custom-style" include="demo-pages-shared-styles">
-    </style>
-  </custom-style>
 </head>
-<body>
-<div class="vertical-section-container centered">
+<body class="app scania">
   <app-root></app-root>
-  <h3>icon-toggle Basic usage</h3>
-  <demo-snippet>
-    <template>
-      <icon-toggle toggle-icon="star"></icon-toggle>
-      <icon-toggle toggle-icon="favorite" pressed></icon-toggle>
-    </template>
-  </demo-snippet>
-  <h3> ks-search Basic usage</h3>
-  OBS: the `ngDefaultControl` allowing the `ks-search` custom element to use angular forms
-   <demo-snippet>
-        <template>
-          <ks-search icon-class="search" reload-on-clear value="Demo" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
-
-        </template>
-      </demo-snippet>
-</div>
-
 </body>
 </html>
