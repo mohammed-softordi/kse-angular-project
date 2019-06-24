@@ -1,17 +1,33 @@
-<ks-main-header [siteName]="title" site-url="/">
-       <ks-nav-item href="https://fmpnextgen.scania.com/#/help/dashboard" title="Help" target="_blank" class="ks-main-header"></ks-nav-item>
-    <ks-nav-item href="https://www.scania.com" title="Scania" target="_blank" class="ks-main-header"></ks-nav-item>
-</ks-main-header>
-<ks-main-content>
-    <h3>KS search custom element</h3>
+<ks-main-navigation [disableMenu]="disableMenu" >
+    <ks-main-header [siteName]="title" [siteUrl]="siteUrl" slot="main-header" [disable]="disableHeader">
+        <ks-nav-item href="https://fmpnextgen.scania.com/#/help/dashboard" title="Help" target="_blank" class="ks-main-header"></ks-nav-item>
+        <ks-nav-item href="https://www.scania.com" title="Scania" target="_blank" class="ks-main-header"></ks-nav-item>
+    </ks-main-header>
 
-    <div>
-      <ks-search icon-class="search" reload-on-clear value="{{searchCriteria}}" [(ngModel)]="searchCriteria" ngDefaultControl></ks-search>
-      <div  style="background-color: green">Value entered in Angular App: {{searchCriteria}} </div>
-    </div>
+    <ks-primary-menu slot="primary-menu" [items]="primaryItems" [subMenuClickHandler]="clickHandler.bind(this)"></ks-primary-menu>
+
+    <ks-secondary-menu slot="secondary-menu">
+        <ks-secondary-menu-item>
+            <ks-nav-profile [items]="accountItems"></ks-nav-profile>
+        </ks-secondary-menu-item>
+
+       <ks-secondary-menu-item [items]="secondaryItems" [dropdown]="true" [subMenuClickHandler]="clickHandler.bind(this)"></ks-secondary-menu-item>
+    </ks-secondary-menu>
+
+   <ks-fullscreen slot="fullscreen"
+           [hideElements]="hideElements"
+           class="hidden-xs hidden-sm"
+           [disable]="disableFullscreen">
+
+   </ks-fullscreen>
+
+</ks-main-navigation>
+
+<ks-main-content>
+     <router-outlet></router-outlet>
 </ks-main-content>
 
-<ks-main-footer>
+<ks-main-footer [disable]="disableFooter">
             <ks-nav-item slot="privacy" target="_blank" class="ks-main-footer" title="Privacy statement"
                          href="https://www.scania.com/uk/en/home/legalnotice/privacy-statement.html"></ks-nav-item>
 </ks-main-footer>
